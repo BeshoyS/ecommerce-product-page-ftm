@@ -1,0 +1,27 @@
+@use "./functions" as f;
+
+$breakpoints-min: (
+    "sl": f.pxtoem(375), //375
+    "md": f.pxtoem(700), //700
+    "lg": f.pxtoem(900), //900
+    "xl": f.pxtoem(1440), //1440
+);
+
+$breakpoints-max: (
+    "sl": f.pxtoem(374.99), 
+    "md": f.pxtoem(699.99),
+    "lg": f.pxtoem(899.99),
+    "xl": f.pxtoem(1439.99),
+);
+
+@mixin breakpoint-tablet($minSize, $maxSize) {
+    @media screen and (min-width: map-get($breakpoints-min, $minSize)) and (max-width: map-get($breakpoints-max, $maxSize)){
+        @content;
+    }
+}
+
+@mixin breakpoint-desktop($minSize) {
+    @media screen and (min-width: map-get($breakpoints-min, $minSize)){
+        @content;
+    }
+}

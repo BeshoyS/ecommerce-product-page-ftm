@@ -1,0 +1,23 @@
+@use "../util" as u;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  width: min(100%, u.pxtorem(1000));
+
+  // @include u.breakpoint-tablet(md,lg) {
+  //     //tablet view
+  //     grid-template-columns: 2fr 1fr;
+  //     grid-template-rows: auto;
+  // }
+  @include u.breakpoint-desktop(lg) {
+    //desktop view
+    width: 90%;
+    gap: u.pxtorem(10);
+    margin: u.pxtorem(32) auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  //children
+}

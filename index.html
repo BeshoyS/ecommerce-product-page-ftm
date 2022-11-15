@@ -1,44 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts - Kumbh Sans 400 & 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>E-commerce product page</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <header class="header flex">
+      <div class="flex">
+        <img
+          id="mobileNavbar"
+          src="./images/icon-menu.svg"
+          class="header__mobilenavbar"
+          aria-controls="header__menu"
+          aria-expanded="false"
+        />
+        <img
+          src="./images/logo.svg"
+          alt="sneakers store logo"
+          class="header__logo"
+        />
+      </div>
+      <nav id="header__menu" class="header__menu">
+        <div class="header__list">
+          <img
+            id="mobileCloseBtn"
+            class="header__listitem header__closeicon"
+            src="./images/icon-close.svg"
+            alt="close menu"
+          />
+          <a class="header__listitem" href="#">Collections</a>
+          <a class="header__listitem" href="#">Men</a>
+          <a class="header__listitem" href="#">Women</a>
+          <a class="header__listitem" href="#">About</a>
+          <a class="header__listitem" href="#">Contact</a>
+        </div>
+      </nav>
+      <div class="header__btngroup flex">
+        <img
+          class="header__cart"
+          src="./images/icon-cart.svg"
+          alt="shopping cart"
+        />
+        <p id="cartCount" class="cart__count">3</p>
+        <img
+          class="header__avatar"
+          src="./images/image-avatar.png"
+          alt="shopping cart"
+        />
+      </div>
+      <div class="header__cartpreview">
+        <h6 class="header__cartpreview__title">Cart</h6>
+        <hr class="header__cartpreview__divider" />
+        <div class="header__cartpreview__details flex">
+          <p>Your cart is empty.</p>
+        </div>
+      </div>
+    </header>
+    <main class="main grid">
+      <section class="flex main__img">
+        <img
+          class="main__mainimg"
+          src="./images/image-product-1.jpg"
+          alt="sneakers"
+        />
+        <div class="main__imgsThumbs">
+          <img
+          class="main__imgsThumbs__oneimg main__imgsThumbs__oneimg--active"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="sneakers thumbnail"
+          />
+          <img
+          class="main__imgsThumbs__oneimg"
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="sneakers thumbnail"
+          />
+          <img
+          class="main__imgsThumbs__oneimg"
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="sneakers thumbnail"
+          />
+          <img
+          class="main__imgsThumbs__oneimg"
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="sneakers thumbnail"
+          />
+        </div>
+      </section>
+      <article class="main__content">
+        <h5 class="main__subtitle">Sneaker Company</h5>
+        <h1 class="main__title">Fall Limited Edition Sneakers</h1>
+        <p class="main__desc">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="main__price flex">
+          <div class="flex">
+            <p class="main__currentprice">$125.00</p>
+            <span class="main__sale">50%</span>
+          </div>
+          <p class="main__originalprice">$250.00</p>
+        </div>
+        <div class="flex main__cta">
+          <div class="main__productcount flex">
+            <img id="minusIcon" src="./images/icon-minus.svg" alt="decrease product count" />
+            <p id="count" class="count" value=0 >0</p>
+            <img id="plusIcon" src="./images/icon-plus.svg" alt="increase product count" />
+          </div>
+          <button class="btn main__btn flex">
+            <img src="./images/icon-cart.svg" alt="add to cart" /> Add to cart
+          </button>
+        </div>
+      </article>
+    </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="./app/main.js"></script>
+  </body>
 </html>

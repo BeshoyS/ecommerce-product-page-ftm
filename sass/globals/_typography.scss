@@ -1,0 +1,36 @@
+@use "../util" as u;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(u.pxtorem(28), u.pxtorem(16) + 2vw, u.pxtorem(40));
+}
+
+h2 {
+    font-size: clamp(u.pxtorem(22), u.pxtorem(14) + 1.5vw, u.pxtorem(36));
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  display: block;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}

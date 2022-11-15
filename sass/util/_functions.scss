@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@function pxtorem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using pxtorem() function, use only numbers';
+  }
+}
+
+@function pxtoem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + em;
+  } @else {
+    @error 'Don\'t use units when using pxtoem() function, use only numbers';
+  }
+}
